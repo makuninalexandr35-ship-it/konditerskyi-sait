@@ -13,3 +13,29 @@ footer{gap:42px}.footer-identity{display:grid;gap:12px;text-align:left}.footer-i
 
 /* Recognizable social network logos */
 .social-icon{width:20px;height:20px;flex:0 0 20px;fill:currentColor;stroke:currentColor;stroke-width:1.8;color:#fff}.social-instagram .social-icon{fill:none}.social-instagram .icon-dot{fill:currentColor;stroke:none}.social-icon-vk{stroke:none}.social-telegram .social-icon{transform:none}
+
+/* Product gallery interactions */
+.product-grid article{position:relative}
+.product-grid img{transition:transform .45s ease}
+.product-grid article:hover img{transform:scale(1.045)}
+.text-link{padding:13px 20px;border:0;border-radius:100px;background:var(--wine);color:#fff;box-shadow:0 8px 22px rgba(89,20,44,.22);letter-spacing:.04em;transition:transform .2s,background .2s,box-shadow .2s}
+.text-link:hover{transform:translateY(-2px);background:var(--wine2);box-shadow:0 12px 28px rgba(89,20,44,.32)}
+.text-link span{color:var(--gold)}
+
+/* Works gallery */
+.works-intro{font:600 19px/1.5 var(--serif);color:var(--ink)!important}
+.gallery{grid-template-columns:repeat(3,1fr);grid-template-rows:none}
+.gallery .gallery-tall{grid-row:auto}
+.gallery figure{aspect-ratio:1/1}
+@media(max-width:700px){.works-intro{font-size:17px}.gallery{grid-template-columns:repeat(2,1fr);grid-template-rows:none}.gallery .gallery-tall{grid-column:auto}}
+
+/* Flavor selection prompt */
+.flavors-heading .flavors-prompt{max-width:390px;margin:0;padding:18px 22px;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;background:rgba(255,255,255,.58);box-shadow:0 8px 24px rgba(89,20,44,.08);font:16px/1.55 var(--sans);color:var(--ink)}
+.flavors-prompt b{display:inline-block;margin-bottom:3px;font:600 22px/1.25 var(--serif);color:var(--wine)}
+@media(max-width:700px){.flavors-heading .flavors-prompt{margin-top:24px}}
+
+/* Individual decoration photo caption */
+.custom-photo>span{padding:14px 18px;border:1px solid rgba(213,170,120,.9);border-radius:8px;background:rgba(255,248,238,.92);box-shadow:0 8px 26px rgba(34,8,18,.28);color:var(--wine);font:600 italic 19px/1.45 Georgia,serif;text-shadow:none}
+
+/* Prevent page-level overflow while preserving horizontal product carousels */
+html,body{max-width:100%;overflow-x:clip}
